@@ -1,0 +1,71 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props"></Import>
+ 
+  <PropertyGroup>
+    <TargetFrameworks>net461;netcoreapp2.2</TargetFrameworks>
+    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+    <RootNamespace>Dataocean.Venus</RootNamespace>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
+    <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+    <LangVersion>7.2</LangVersion>
+  </PropertyGroup>
+ 
+  <ItemGroup>
+    <Compile Remove="Migrations\20170406083347_Initial_Migration.cs" />
+    <Compile Remove="Migrations\20170406083347_Initial_Migration.Designer.cs" />
+    <Compile Remove="Migrations\20170623075109_AspNetZero_V4_1_Changes.cs" />
+    <Compile Remove="Migrations\20170623075109_AspNetZero_V4_1_Changes.Designer.cs" />
+    <Compile Remove="Migrations\20170704084731_Added_GoogleAuthenticatorKey_Column.cs" />
+    <Compile Remove="Migrations\20170704084731_Added_GoogleAuthenticatorKey_Column.Designer.cs" />
+    <Compile Remove="Migrations\20170714081027_Added_Relation_Between_Edition_And_SubscriptionPayment.cs" />
+    <Compile Remove="Migrations\20170714081027_Added_Relation_Between_Edition_And_SubscriptionPayment.Designer.cs" />
+    <Compile Remove="Migrations\20170724142223_Upgraded_To_Abp_V2_2.cs" />
+    <Compile Remove="Migrations\20170724142223_Upgraded_To_Abp_V2_2.Designer.cs" />
+    <Compile Remove="Migrations\20170913133916_Added_SharedMessageId_To_ChatMessage.cs" />
+    <Compile Remove="Migrations\20170913133916_Added_SharedMessageId_To_ChatMessage.Designer.cs" />
+    <Compile Remove="Migrations\20170914070123_Added_ReceiverReadState_To_ChatMessage.cs" />
+    <Compile Remove="Migrations\20170914070123_Added_ReceiverReadState_To_ChatMessage.Designer.cs" />
+    <Compile Remove="Migrations\20170914084815_Invoice_Changes.cs" />
+    <Compile Remove="Migrations\20170914084815_Invoice_Changes.Designer.cs" />
+    <Compile Remove="Migrations\20170914121022_TypeChange_SharedMessageId_String_Guid.cs" />
+    <Compile Remove="Migrations\20170914121022_TypeChange_SharedMessageId_String_Guid.Designer.cs" />
+    <Compile Remove="Migrations\20180118065703_Added_Entity_History.cs" />
+    <Compile Remove="Migrations\20180118065703_Added_Entity_History.Designer.cs" />
+    <Compile Remove="Migrations\20180320065710_Upgraded_To_Abp_V3_5.cs" />
+    <Compile Remove="Migrations\20180320065710_Upgraded_To_Abp_V3_5.Designer.cs" />
+    <Compile Remove="Migrations\20180718081610_Abp_v3_7_Changes.cs" />
+    <Compile Remove="Migrations\20180718081610_Abp_v3_7_Changes.Designer.cs" />
+    <Compile Remove="Migrations\20180726063233_Upgraded_ABP_v3.8.0.cs" />
+    <Compile Remove="Migrations\20180726063233_Upgraded_ABP_v3.8.0.Designer.cs" />
+    <Compile Remove="Migrations\20180731052649_Upgrade_ABP_v3.8.1.cs" />
+    <Compile Remove="Migrations\20180731052649_Upgrade_ABP_v3.8.1.Designer.cs" />
+    <Compile Remove="Migrations\20180807062930_Upgrade_ABP_v3.8.2.cs" />
+    <Compile Remove="Migrations\20180807062930_Upgrade_ABP_v3.8.2.Designer.cs" />
+    <Compile Remove="Migrations\20181012141151_Upgraded_To_Abp_v3_9_0.cs" />
+    <Compile Remove="Migrations\20181012141151_Upgraded_To_Abp_v3_9_0.Designer.cs" />
+    <Compile Remove="Migrations\20190103081952_Recurring_Payment_Changes.cs" />
+    <Compile Remove="Migrations\20190103081952_Recurring_Payment_Changes.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.2.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.2.1" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="2.1.4" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql.Design" Version="1.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Dataocean.Venus.Core\Dataocean.Venus.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net461' ">
+    <Reference Include="System.Transactions" />
+  </ItemGroup>
+
+</Project>

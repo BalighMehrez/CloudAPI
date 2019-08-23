@@ -1,0 +1,10 @@
+﻿using Dataocean.Venus.Security;
+
+namespace Dataocean.Venus.Authorization.Users.Profile.Dto
+{
+    public class GetPasswordComplexitySettingOutput
+    {
+        public PasswordComplexitySetting Setting { get; set; }
+    }
+}
+
